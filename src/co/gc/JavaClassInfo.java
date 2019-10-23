@@ -67,13 +67,25 @@ public class JavaClassInfo {
 					System.out.print("Try again: ");
 					continue;
 				}
+				catch (IllegalArgumentException e)	{
+					System.out.println("To be honest, I'm not even sure how you got here.");
+					System.out.println("Just uhh, just put in the right stuff.");
+					continue;
+				
+				}
+				
+				catch (Exception e)
+				{
+					System.out.println("Wow you really broke this huh. Wellllll just try one more time.");
+					continue;
+				}
 			} while (!check);
 			do {
 				input = scan.nextLine();
 
 				if (input.equalsIgnoreCase("entry") && numInput == 0) {
 					System.out.println(
-							"Did I say you could input entry? I told you Sean isn't a pokemon, you can't just type something and expect me to bend over backwards for you.");
+							"Did I say you could input entry? I told you Sean isn't a pokemon, \nyou can't just type something and expect me to bend over backwards for you.");
 					continue;
 				} else if (input.equalsIgnoreCase("type") && numInput == 0) {
 					System.out.println("Sean is a nor --WAIT. I SAID HE WASN'T A PO --STOP IT! GET OUT OF HERE");
